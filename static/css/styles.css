@@ -37,6 +37,7 @@ body {
 .contact-link { 
     display: inline-flex;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .contact-link:hover .contact-icon {
@@ -50,7 +51,7 @@ body {
     padding: 5px;
 }
 .contact-link:hover{
-    background-color: #00B98E;
+    transform: scale(1.03);
     color: white;
     border-radius: 5px;
 }
