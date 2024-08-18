@@ -53,7 +53,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0.2, 0.2, 0.2);
     z-index: 1000;
     padding-bottom: 5px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease-in-out; 
 }
 .navbar-nav{
     padding-bottom: 5px;
@@ -66,6 +66,9 @@ body {
     margin-bottom: 10px;
     margin-left: auto; 
     margin-right: 10px; 
+}
+.navbar-collapse{
+    transition: transform 0.3s ease-in-out;
 }
 .navbar-collapse.fixed-top { 
     position: fixed;
