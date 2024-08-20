@@ -14,6 +14,9 @@ def aboutus(request):
 def registerpage(request):
     return render(request,'register.html')
 
+def researchpaper(request):
+    return render(request,'researchpaper.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')
