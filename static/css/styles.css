@@ -266,9 +266,6 @@ nav-link dropdown-toggle{
     background-color: var(--gemini-color-pink-gradient); 
 }
 
-
-
-
 .ourservices .service-item h4 {
     font-size: 18px;
     font-weight: 600;
@@ -399,7 +396,7 @@ footer .bi {
     color: #f7f9fd;
 
 }
-.registration-form {
+.contact-form {
     background-size: cover; 
     background-position: center; 
     display: flex;
@@ -457,12 +454,14 @@ footer .bi {
     border-radius: 10px;
     cursor: pointer;
     background-color: #4285f4;
+    color: white;
 }
 .submit button svg{
     margin-left: 5px;
 }
 .submit button:hover{
     background-color: #368EFE;
+    color: white;
 }
 .contact-info {
     display: flex;
@@ -507,3 +506,68 @@ footer .bi {
   .contact-text {
     margin-left: 8px;
   }
+
+/*register*/
+.register {
+    padding: 4rem 0;
+    background-image: url('/static/images/desginer.png');
+    background-size: cover; 
+    position: relative; 
+}
+
+.register p{
+    text-align: center;
+    color: #d2d8e4;
+}
+.register h2{
+    text-align: center;
+    color: #f7f9fd;
+
+}
+.registration-form {
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto; 
+    padding: 40px;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+}
+.loading-spinner {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+}
+
+.error-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+}
+
+.error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+}
+.btn-success{
+    background-color: #218838;
+    color: white;
+}

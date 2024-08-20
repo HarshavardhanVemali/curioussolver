@@ -15,4 +15,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
+function isWhatsAppInstalled() {
+    return navigator.userAgent.toLowerCase().indexOf('whatsapp') > -1;
+  }
+  const whatsappLink = document.querySelector('.whatsapp-link');
+  if (isWhatsAppInstalled()) {
+    whatsappLink.href = "whatsapp://send?phone=+917675922209&text=Hello";
+  } else {
+    whatsappLink.href = "https://wa.me/+917675922209?text=Hello";
+  }

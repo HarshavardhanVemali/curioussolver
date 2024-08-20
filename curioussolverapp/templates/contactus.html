@@ -25,7 +25,7 @@
                         <span class="fs-4 fw-bold">Curious@Solver</span>               
                     </a>
                     <div> 
-                        <a href="#" class="text-decoration-none text-dark contact-link me-3" id="registernow">
+                        <a href="{% url 'registerpage' %}" class="text-decoration-none text-dark contact-link me-3" id="registernow">
                             <span style="color: white;">Register Now</span>
                         </a>
                         <a href="mailto:psr.cse@mvgrce.edu.in"  class="text-decoration-none text-dark contact-link me-3">
@@ -116,7 +116,7 @@
           <p data-aos="fade-up" data-aos-delay="200">
             Get touch with us and be a part of this innovative experience!
           </p>
-          <form action="" method="post" class="registration-form" id="registration-form" data-aos="fade-up" data-aos-delay="300">
+          <form action="" method="post" class="contact-form" id="contact-form" data-aos="fade-up" data-aos-delay="300">
             {% csrf_token %} 
             <div class="form-group">
               <label for="student_name">Name </label>
