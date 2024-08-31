@@ -45,29 +45,23 @@
     text-align: center;
     color: white; 
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.3); 
     backdrop-filter: blur(1px); 
     border-radius: 10px;
     padding: 20px; 
-
-}
-
-
+    }
     .service-icon {
         font-size: 3rem;
         margin-bottom: 1rem;
     }
-
     .portfolio-item {
         position: relative; 
         overflow: hidden; 
     }
-
     .portfolio-item img {
         transition: transform 0.3s ease;
         height: 250px;
     }
-
     .portfolio-item:hover img {
         transform: scale(1.1); 
     }
@@ -167,50 +161,66 @@
 
     <section id="why-choose-us" class="py-5">
         <div class="">
-            <h2 class="text-center mb-4">Your Vision, Our Expertise</h2>
-            <div class="why-choose-us row">
-                <div class="col-md-4 mb-4 why-choose">
-                    <i class="bi bi-code-slash service-icon text-primary"></i> 
-                    <h3>Technical Proficiency</h3>
-                    <p>We excel in the latest web technologies, including HTML, CSS, JavaScript, Python (Django), and more, to build fast, secure, and scalable websites.</p>
+          <h2 class="text-center mb-4" style="color: var(--gemini-color-grey-600); text-align: center;">
+            Your Vision, <span style="color: #078EFB;">Our Expertise</span>
+          </h2>       
+          <div class="why-choose-us row d-flex">
+            <div class="col-md-4 d-flex">
+                <div class="service-item flex-fill why-choose">
+                    <div style="display: flex;align-items: center;">
+                        <i class="bi bi-code-slash service-icon text-primary"></i> 
+                        <h3>Technical Proficiency</h3>
+                      </div>
+                      <p>We excel in the latest web technologies, including HTML, CSS, JavaScript, Python (Django), and more, to build fast, secure, and scalable websites.</p>
                 </div>
-                <div class="col-md-4 mb-4 why-choose">
-                    <i class="bi bi-people-fill service-icon text-primary"></i> 
-                    <h3>Client-Centric Approach</h3>
-                    <p>Your vision is at the heart of everything we do. We work closely with you, ensuring clear communication and collaboration throughout the development process.</p>
-                </div>
-                <div class="col-md-4 mb-4 why-choose">
-                    <i class="bi bi-graph-up-arrow service-icon text-primary"></i>
-                    <h3>Results-Driven Solutions</h3>
-                    <p>We don't just build websites; we build websites that deliver. Our focus on user experience, SEO, and conversion optimization ensures your website achieves its goals.</p>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="service-item flex-fill why-choose">
+                    <div style="display: flex;align-items: center;">
+                   
+                        <i class="bi bi-people-fill service-icon text-primary"></i> 
+                        <h3>Client-Centric Approach</h3>
+                      </div>
+              
+                      <p>Your vision is at the heart of everything we do. We work closely with you, ensuring clear communication and collaboration throughout the development process.</p>
+                </div> 
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="service-item flex-fill why-choose">
+                    <div style="display: flex;align-items: center;">
+                        <i class="bi bi-graph-up-arrow service-icon text-primary"></i>
+                        <h3>Results-Driven Solutions</h3>
+                      </div>
+              
+                      <p>We don't just build websites; we build websites that deliver. Our focus on user experience, SEO, and conversion optimization ensures your website achieves its goals.</p>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
     <section id="development-process" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Our Website Development Process</h2>
+            <h2 class="text-center mb-4" style="background: linear-gradient(360deg, #217BFE 0%, #078EFB 33.53%, #AC87EB 67.74%, #EE4D5D 100%);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent;">Our Website Development Process</h2>
             <div class="row">
                 <div class="col-md-3 mb-4 text-center development-process"> 
-                    <span class="display-4">1</span>
-                    <h3>Discovery</h3>
-                    <p>Understanding your goals, target audience, and requirements.</p>
+                    <span class="display-4" style="background: linear-gradient(270deg, #a485fa -104.88%, var(--gemini-color-red-200) 198.78%);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent;">1</span>
+                    <h3 style="color: var(--gemini-color-grey-200);">Discover</h3>
+                    <p style="color: var(--gemini-color-grey-500);">Understanding your goals, target audience, and requirements.</p>
                 </div>
                 <div class="col-md-3 mb-4 text-center development-process"> 
-                    <span class="display-4">2</span>
-                    <h3>Planning & Design</h3>
-                    <p>Creating a sitemap, wireframes, and a visually appealing design.</p>
+                    <span class="display-4" style="background: linear-gradient(270deg, #a485fa -104.88%, var(--gemini-color-red-200) 198.78%);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent;">2</span>
+                    <h3 style="color: var(--gemini-color-grey-200);">Planning & Design </h3>
+                    <p style="color: var(--gemini-color-grey-500);">Creating a sitemap, wireframes, and a visually appealing design.</p>
                 </div>
                 <div class="col-md-3 mb-4 text-center development-process"> 
-                    <span class="display-4">3</span>
-                    <h3>Development</h3>
-                    <p>Bringing your website to life with clean, efficient code.</p>
+                    <span class="display-4" style="background: linear-gradient(270deg, #a485fa -104.88%, var(--gemini-color-red-200) 198.78%);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent;">3</span>
+                    <h3 style="color: var(--gemini-color-grey-200);">Development</h3>
+                    <p style="color: var(--gemini-color-grey-500);">Bringing your website to life with clean, efficient code.</p>
                 </div>
                 <div class="col-md-3 mb-4 text-center development-process"> 
-                    <span class="display-4">4</span>
-                    <h3>Testing & Launch</h3>
-                    <p>Rigorous testing to ensure a flawless user experience before going live.</p>
+                    <span class="display-4" style="background: linear-gradient(270deg, #a485fa -104.88%, var(--gemini-color-red-200) 198.78%);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent;">4</span>
+                    <h3 style="color: var(--gemini-color-grey-200);">Testing & Launch</h3>
+                    <p style="color: var(--gemini-color-grey-500);">Rigorous testing to ensure a flawless user experience before going live.</p>
                 </div>
             </div>
         </div>
@@ -224,31 +234,51 @@
                     <div class="portfolio-item">
                         <img src="{% static 'images/bussiness.jpeg' %}" alt="Business Website" class="img-fluid"> 
                     </div>
-                    <h3>Business Websites</h3>
-                    <p>Establish a professional online presence with a website that showcases your brand, services, and expertise.</p>
+                    <h3 style="color: var(--gemini-color-grey-600);">Business Websites</h3>
+                    <p style="color: var(--gemini-color-grey-500);font-weight: 300;">Establish a professional online presence with a website that showcases your brand, services, and expertise.</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="portfolio-item">
                         <img src="{% static 'images/ecommerce.png' %}" alt="E-commerce Website" class="img-fluid"> 
                     </div>
-                    <h3>E-commerce Stores</h3>
-                    <p>Launch your online store with secure payment gateways, inventory management, and a user-friendly shopping experience.</p>
+                    <h3 style="color: var(--gemini-color-grey-600);">E-commerce Stores</h3>
+                    <p style="color: var(--gemini-color-grey-500);font-weight: 300;">Launch your online store with secure payment gateways, inventory management, and a user-friendly shopping experience.</p>
                 </div>
                 <div class="col-md-4 mb-4"> 
                     <div class="portfolio-item">
                         <img src="{% static 'images/portfolio.png' %}" alt="Portfolio Website" class="img-fluid">
                     </div>
-                    <h3>Portfolio Websites</h3>
-                    <p>Showcase your work and talents with a stunning online portfolio that highlights your skills and achievements.</p>
+                    <h3 style="color: var(--gemini-color-grey-600);">Portfolio Websites</h3>
+                    <p  style="color: var(--gemini-color-grey-500);font-weight: 300;">Showcase your work and talents with a stunning online portfolio that highlights your skills and achievements.</p>
+                </div>
+                <div class="col-md-4 mb-4"> 
+                    <div class="portfolio-item">
+                        <img src="{% static 'images/education.png' %}" alt="education Website" class="img-fluid">
+                    </div>
+                    <h3 style="color: var(--gemini-color-grey-600);">Educational Websites</h3>
+                    <p  style="color: var(--gemini-color-grey-500);font-weight: 300;">Engaging platforms for institutions to connect with students and faculty.</p>
+                </div>
+                <div class="col-md-4 mb-4"> 
+                    <div class="portfolio-item">
+                        <img src="{% static 'images/datadashboard.png' %}" alt="datadashboard Website" class="img-fluid">
+                    </div>
+                    <h3 style="color: var(--gemini-color-grey-600);">Data Dashboards</h3>
+                    <p  style="color: var(--gemini-color-grey-500);font-weight: 300;">Interactive visualizations and insights from your data.</p>
+                </div>
+                <div class="col-md-4 mb-4"> 
+                    <div class="portfolio-item">
+                        <img src="{% static 'images/webapplication.png' %}" alt="Website" class="img-fluid">
+                    </div>
+                    <h3 style="color: var(--gemini-color-grey-600);">Custom Web Applications</h3>
+                    <p  style="color: var(--gemini-color-grey-500);font-weight: 300;">Tailored solutions to streamline your business processes.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="get-started" class="py-5 bg-light text-center">
+    <section id="get-started" class="py-5  text-center" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
         <div class="container">
-            <h2 class="mb-4">Ready to Build Your Dream Website?</h2>
-            <p>Let's discuss your project and turn your vision into reality.</p>
+            <h2 class="mb-4" style="background: var(--gemini-color-pink-gradient);-webkit-background-clip: text; background-clip: text;-webkit-text-fill-color: transparent; text-fill-color: transparent; ">Ready to Build Your Dream Website <i class="bi bi-rocket-takeoff-fill"></i></h2>
+            <p style="color: var(--gemini-color-grey-600);">Let's discuss your project and turn your vision into reality.</p>
             <a href="#" class="btn btn-primary btn-lg">Get Started Today</a>
         </div>
     </section>

@@ -41,7 +41,7 @@
 }
 body {
     margin: 0;
-    font-family: "Heebo", sans-serif;
+    font-family: "Heebo", sans-serif !important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -649,16 +649,24 @@ footer .bi {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%; 
-    color: white;
+    color: var(--gemini-color-gemini-grey-800);
     text-align: center;
     z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: center; 
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(1px); 
+    border-radius: 10px;
+    padding: 20px; 
+    
 }
 .aboutus-banner-content p{
     margin-left: 10px;
+    color: white;
+   
 }
 
 .aboutus-banner-content img {
@@ -819,20 +827,47 @@ footer .bi {
 }
 
 .why-choose-us {
-    margin-top: 50px; 
-    background-color: #fff; 
+    background-color: #fff;
     padding: 40px;
-    border-radius: 10px;
-   
+  }
+.why-choose>div{
+    gap: 5px;
 }
-
-.why-choose-us h3 {
-    color: #343a40;
+  .why-choose {
+    background-color: var(--gemini-color-grey-50);
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
     margin-bottom: 20px;
-}
+    transition: transform 0.3s ease-in-out;
+  }
+  .why-choose:hover{
+    transform: scale(0.98);
+  }
+  .why-choose h3 {
+    color: var(--gemini-color-grey-700);
+    margin-bottom: 10px;
+  }
 
-.why-choose-us p {
-    color: #495057;
-    line-height: 1.6; 
-    margin-bottom: 15px; 
+  .why-choose p {
+    color: var(--gemini-color-grey-500);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+#development-process{
+    background: linear-gradient(to bottom, var(--gemini-color-grey-600), var(--gemini-color-grey-700)) !important;
+}
+.portfolio-item{
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 415px) {
+    #development-process>div>h2{
+        background: linear-gradient(90deg, #217BFE 0%, #078EFB 33.53%, #AC87EB 67.74%, #EE4D5D 100%) !important;
+        -webkit-background-clip: text !important; 
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+         text-fill-color: transparent !important;
+    }
 }
