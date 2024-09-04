@@ -162,12 +162,14 @@ nav-link dropdown-toggle{
     color: rgba(0, 0, 0, .6) !important; 
     transition: background-color 0.3s;
     border-radius: 3px;
-    
+    border-left: 2px solid transparent;
+    transition: transform 0.3s ease-in-out;
   }
 
   .dropdown-item:hover,
   .dropdown-item:focus {
     background-color: #e9ecef; 
+    border-left: 2px solid #007bff;
   }
   .navbar-nav .nav-item .dropdown-menu {
     display: none;
