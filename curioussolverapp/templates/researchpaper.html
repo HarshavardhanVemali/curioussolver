@@ -67,7 +67,7 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <div class="col-md-12 d-flex justify-content-between"> 
                     <ul class="navbar-nav justify-content-center">
-                        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="{% url 'aboutus' %}" class="nav-link">About Us</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" >Projects</a>
@@ -78,9 +78,9 @@
                                 <li><a href="#" class="dropdown-item">Post Doc</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="{% url 'researchpaper' %}" class="nav-link">Research Paper Writing & Publishing</a></li>
+                        <li class="nav-item"><a href="{% url 'researchpaper' %}" class="nav-link active">Research Paper Writing & Publishing</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Internships</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Patents</a></li>
+                        <li class="nav-item"><a href="{% url 'patents' %}" class="nav-link">Patents</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" >Services</a>
                             <ul class="dropdown-menu rounded-0">

@@ -20,6 +20,9 @@ def researchpaper(request):
 def websitedevelopment(request):
     return render(request,'websitedevelopment.html')
 
+def patents(request):
+    return render(request,'patents.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')
