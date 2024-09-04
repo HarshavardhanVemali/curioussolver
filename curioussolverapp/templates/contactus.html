@@ -62,10 +62,10 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <div class="col-md-12 d-flex justify-content-between"> 
                     <ul class="navbar-nav justify-content-center">
-                        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
                         <li class="nav-item"><a href="{% url 'aboutus' %}" class="nav-link">About Us</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                            <a href="#" class="nav-link dropdown-toggle" >Projects</a>
                             <ul class="dropdown-menu rounded-0">
                                 <li><a href="#" class="dropdown-item">UG</a></li>
                                 <li><a href="#" class="dropdown-item">PG</a></li>
@@ -74,11 +74,23 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a href="{% url 'researchpaper' %}" class="nav-link">Research Paper Writing & Publishing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Career Guidance</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Internships</a></li>
-                        <li class="nav-item"><a href="{% url 'websitedevelopment' %}" class="nav-link">Website Development</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">LMS</a></li>
-                        <li class="nav-item"><a href="{% url 'contactus' %}" class="nav-link active">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Patents</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" >Services</a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a href="#" class="dropdown-item">Career Guidance</a></li>
+                                <li><a href="{% url 'websitedevelopment' %}" class="dropdown-item">Website Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" >Learning</a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a href="#" class="dropdown-item">LMS</a></li>
+                                <li><a href="{% url 'websitedevelopment' %}" class="dropdown-item">Courses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'contactus' %}" class="nav-link">Contact Us</a></li>
                     </ul>
                     <div class="col-auto"> 
                         <form class="d-flex">

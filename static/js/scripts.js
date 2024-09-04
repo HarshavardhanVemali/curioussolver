@@ -24,3 +24,20 @@ function isWhatsAppInstalled() {
   } else {
     whatsappLink.href = "https://wa.me/+917675922209?text=Hello";
   }
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var dropdownButtons = document.querySelectorAll('.navbar-nav .nav-item.dropdown');
+    dropdownButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            button.querySelector('.dropdown-menu').classList.toggle('show');
+        });
+    });
+    document.addEventListener('click', function(event) {
+        dropdownButtons.forEach(function(button) {
+            var dropdownMenu = button.querySelector('.dropdown-menu');
+            if (!button.contains(event.target) && dropdownMenu.classList.contains('show')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+});

@@ -55,9 +55,7 @@ body {
     padding-bottom: 5px;
     transition: background-color 0.3s ease-in-out; 
 }
-.navbar-nav{
-    padding-bottom: 5px;
-}
+
 .nav-item.dropdown ul{
     padding: 3px;
 
@@ -119,6 +117,8 @@ body {
     gap: 15px;
     position: sticky;
     font-size: 15px !important;
+    font-weight: 400 !important;
+    color: rgba(0, 0, 0, .6) !important;
 }
 .navbar-light .navbar-nav .nav-link.active{
     border-bottom: 2px solid #0d6efd !important;
@@ -128,10 +128,8 @@ body {
 .carousel-control-prev {
     width: 5%;
 }
-
 .carousel-item img {
     height: 500px;
-    z-index: -1;
 }
 
 .contact-icon {
@@ -152,6 +150,36 @@ body {
 nav-link dropdown-toggle{
     z-index: 9999;
 }
+.dropdown-menu {
+    background-color: #fff;
+    border-radius:0 0 5px 5px !important; 
+    z-index: 1001 !important;
+    border-top:3px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0.2, 0.2, 0.2);
+   
+  }
+  .dropdown-item {
+    color: rgba(0, 0, 0, .6) !important; 
+    transition: background-color 0.3s;
+    border-radius: 3px;
+    
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #e9ecef; 
+  }
+  .navbar-nav .nav-item .dropdown-menu {
+    display: none;
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+    display: block; 
+}
+.navbar-nav .nav-item .dropdown-menu.show {
+    display: block;
+}
+  .drop-
 .contact-link {
     display: inline-flex;
     align-items: center;
