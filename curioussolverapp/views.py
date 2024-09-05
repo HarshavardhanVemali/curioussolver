@@ -23,6 +23,12 @@ def websitedevelopment(request):
 def patents(request):
     return render(request,'patents.html')
 
+def courses(request):
+    return render(request,'courses.html')
+
+def internships(request):
+    return render(request,'internships.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')

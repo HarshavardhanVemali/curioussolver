@@ -12,4 +12,6 @@ urlpatterns = [
     path('researchpaper/',views.researchpaper,name='researchpaper'),
     path('websitedevelopment/',views.websitedevelopment,name='websitedevelopment'),
     path('patents/',views.patents,name='patents'),
+    path('courses/',views.courses,name='courses'),
+    path('internships/',views.internships,name='internships'),
 ]

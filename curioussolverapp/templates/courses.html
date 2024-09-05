@@ -7,10 +7,80 @@
     <title>Curious@Solver</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" /> 
-    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <script src="{% static 'js/scripts.js' %}"></script>
 </head>
+<style>
+    html,body{
+        overflow-x: hidden;
+    }
+    .hero-section {
+        min-height: 400px; 
+        color: white; 
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-section {
+        position: relative; 
+        min-height: 400px;
+    }
+
+    .hero-image {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;     
+    }
+    .hero-text {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white; 
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(1px); 
+    border-radius: 10px;
+    padding: 20px; 
+    }
+    .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .portfolio-item {
+        position: relative; 
+        overflow: hidden; 
+    }
+    .portfolio-item img {
+        transition: transform 0.3s ease;
+        height: 250px;
+    }
+    .portfolio-item:hover img {
+        transform: scale(1.1); 
+    }
+    .course-card {
+        border: none;
+        border-radius: 15px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+        transform: translateY(-5px); 
+    }
+
+    .course-card img {
+        border-top-left-radius: 15px; 
+        border-top-right-radius: 15px; 
+    }
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
         <div class="container-fluid"> 
@@ -82,7 +152,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" >Learning</a>
+                            <a href="#" class="nav-link dropdown-toggle active" >Learning</a>
                             <ul class="dropdown-menu rounded-0">
                                 <li><a href="#" class="dropdown-item">LMS</a></li>
                                 <li><a href="{% url 'courses' %}" class="dropdown-item">Courses</a></li>
@@ -107,46 +177,65 @@
     <button id="scrollToTopBtn" title="Back to top">
         <i class="bi bi-chevron-up"></i>
     </button>
-    <section class="register">
-        <h2>Register</h2>
+    <section class="hero-section">
+        <img src="{% static 'images/courses.png' %}" alt="Courses Hero" class="hero-image">
+        <div class="container hero-text">
+            <h1 class="display-4 fw-bold">Unlock Your Potential: Master New Skills</h1>
+            <p class="lead mb-4">The future belongs to those who never stop learning. Start your journey to mastery today.</p>
+        </div>
+    </section>
+
+    <section class="py-5" id="courses-section">
         <div class="container">
-            <p style="text-align: center;">Join a Community of Talented Creators. List Your Projects Today.</p>
+            <h2 class="text-center mb-4" style="color: var(--gemini-color-grey-600);">
+                Elevate Your Expertise with Our <span style="color: #078EFB;">Courses</span>
+            </h2>
             <div class="row">
-                <div class="col-md-6 offset-md-3"> 
-                    <form action="" method="post" class="registration-form" id="registration-form">
-                        {% csrf_token %} 
-                        <div class="form-group">
-                            <label for="student_name">Name </label>
-                            <input type="text" id="student_name" name="student_name" required/>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="{% static 'images/carousel-4.jpg' %}" class="card-img-top" alt="Course 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Course Title 1</h5>
+                            <p class="card-text">Short course description.  Mention key skills or benefits.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email </label>
-                            <input type="email" id="email" name="email"required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone_number">Phone Number </label>
-                            <input type="tel" id="phone_number" name="phone_number"required/>
-                        </div>
-                        <div class="submit">
-                            <button type="submit" class="btn" id="register-btn">
-                                Register 
-                            </button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="{% static 'images/carousel-4.jpg' %}" class="card-img-top" alt="Course 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Course Title 2</h5>
+                            <p class="card-text">Short course description. Mention key skills or benefits.</p>
+                            <div class="display flex justify-content-center">
+                                <a href="#" class="btn btn-primary" >Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="{% static 'images/carousel-4.jpg' %}" class="card-img-top" alt="Course 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Course Title 3</h5>
+                            <p class="card-text">Short course description.  Mention key skills or benefits.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+            <div style="display: flex;justify-content: center;transition: transform 0.3s ease-in-out;">
+                <a  style="transition: transform 0.3s ease-in-out;" href="{% url 'contactus' %}" class="text-decoration-none text-dark contact-link me-3" id="registernow">
+                    <span style="color: white;">Know More</span>
+                </a>
             </div>
         </div>
     </section>
-    <div class="loading-spinner">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <div class="error-overlay">
-        <div class="error-message">
-            <p id="error-text"></p> <button class="btn btn-danger btn-sm" onclick="hideErrorOverlay()">Close</button>
-        </div>
-    </div>
+
     <footer class="bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -185,13 +274,16 @@
                 </div>
             </div>
         </div>
+        
         <div class="row m-0"> 
             <div class="col-12 text-center mt-4 py-2" style="background-color: black;">
                 <p class="mb-0">© Copyright – 2024 Curious@Solver. All Rights Reserved.</p>
             </div>
         </div>
     </footer>    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('scrollToTopBtn').addEventListener('click', () => {
         window.scrollTo({
@@ -199,58 +291,6 @@
             behavior: 'smooth'
         });
     });
-    </script>
-     <script>
-        const registrationForm = document.getElementById('registration-form');
-        const registerBtn = document.getElementById('register-btn');
-        const loadingSpinner = document.querySelector('.loading-spinner');
-        const errorOverlay = document.querySelector('.error-overlay');
-        const errorText = document.getElementById('error-text');
-
-        registrationForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(registrationForm);
-            loadingSpinner.style.display = 'block';
-            registerBtn.disabled = true; 
-
-            fetch('/registerform/', {
-                method: 'POST', 
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                loadingSpinner.style.display = 'none';
-                registerBtn.disabled = false; 
-
-                if (data.success) {
-                    registerBtn.innerHTML = '<i class="bi bi-check2-circle"></i> Registered!'; 
-                    registerBtn.classList.add('btn-success'); 
-                    registerBtn.disabled = true; 
-                } else {
-                    showErrorOverlay(data.message);
-                }
-            })
-            .catch(error => {
-                loadingSpinner.style.display = 'none';
-                registerBtn.disabled = false; 
-                console.error('Error during registration:', error);
-                showErrorOverlay('An error occurred. Please try again later.'); 
-            });
-        });
-
-        function showErrorOverlay(message) {
-            errorText.textContent = message;
-            errorOverlay.style.display = 'block';
-        }
-
-        function hideErrorOverlay() {
-            errorOverlay.style.display = 'none';
-        }
     </script>
 </body>
 </html>
