@@ -13,5 +13,7 @@ urlpatterns = [
     path('websitedevelopment/',views.websitedevelopment,name='websitedevelopment'),
     path('patents/',views.patents,name='patents'),
     path('courses/',views.courses,name='courses'),
+    path('ugprojects/',views.ugprojects,name='ugprojects'),
+    path('pgprojects/',views.pgprojects,name='pgprojects'),
     path('internships/',views.internships,name='internships'),
 ]

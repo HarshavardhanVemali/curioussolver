@@ -29,6 +29,12 @@ def courses(request):
 def internships(request):
     return render(request,'internships.html')
 
+def ugprojects(request):
+    return render(request,'ugprojects.html')
+
+def pgprojects(request):
+    return render(request,'pgprojects.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')

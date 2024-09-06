@@ -12,6 +12,74 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <script src="{% static 'js/scripts.js' %}"></script>
 </head>
+<style>
+    .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.hero-section {
+        min-height: 400px; 
+        color: white; 
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-section {
+        position: relative; 
+        min-height: 400px;
+    }
+
+    .hero-image {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;     
+    }
+    .hero-text {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white; 
+    z-index: 10;
+    padding: 20px; 
+    }
+    .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .portfolio-item {
+        position: relative; 
+        overflow: hidden; 
+    }
+    .portfolio-item img {
+        transition: transform 0.3s ease;
+        height: 250px;
+    }
+    .portfolio-item:hover img {
+        transform: scale(1.1); 
+    }
+    .internship-card { 
+        border: none;
+        border-radius: 15px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease; 
+        overflow: hidden; 
+    }
+
+    .internship-card:hover {
+        transform: translateY(-5px); 
+    }
+
+    .internship-card img {
+        height: 200px; 
+        object-fit: cover;
+    }
+</style>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
@@ -65,7 +133,7 @@
                         <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="{% url 'aboutus' %}" class="nav-link">About Us</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" >Projects</a>
+                            <a href="#" class="nav-link active dropdown-toggle" >Projects</a>
                             <ul class="dropdown-menu rounded-0">
                                 <li><a href="{% url 'ugprojects' %}" class="dropdown-item">UG</a></li>
                                 <li><a href="{% url 'pgprojects' %}" class="dropdown-item">PG</a></li>
@@ -90,7 +158,7 @@
                                 <li><a href="{% url 'courses' %}" class="dropdown-item">Courses</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="{% url 'contactus' %}" class="nav-link active">Contact Us</a></li>
+                        <li class="nav-item"><a href="{% url 'contactus' %}" class="nav-link">Contact Us</a></li>
                     </ul>
                     <div class="col-auto"> 
                         <form class="d-flex">
@@ -108,67 +176,172 @@
     </nav>
     <button id="scrollToTopBtn" title="Back to top">
         <i class="bi bi-chevron-up"></i>
-      </button>
-    <section id="contact">
-        <div class="container">
-          <h2 data-aos="fade-up">Contact Us</h2>
-          <div class="contact-info">
-            <div class="contact-item">
-              <a href="tel:+918639562606" class="dice-button">
-                <i class="bi bi-telephone"></i> 
-                <span class="contact-text">91-8639562606</span>
-              </a>
-            </div>
-            <div class="contact-item">
-              <a href="mailto:psr.cse@mvgrce.edu.in" class="dice-button">
-                <i class="bi bi-envelope-at"></i> 
-                <span class="contact-text">psr.cse@mvgrce.edu.in</span>
-              </a>
-            </div>
-            <div class="contact-item">
-                <a href="https://www.google.com/maps?ll=18.060178,83.40558&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=2045561930180895679" class="dice-button" target="_blank">
-                    <i class="bi bi-geo-alt"></i> 
-                  <span class="contact-text">Address</span>
-                </a>
-              </div>
-          </div>
-          </div>
-          <p data-aos="fade-up" data-aos-delay="200">
-            Get touch with us and be a part of this innovative experience!
-          </p>
-          <form action="" method="post" class="contact-form" id="contact-form" data-aos="fade-up" data-aos-delay="300">
-            {% csrf_token %} 
-            <div class="form-group">
-              <label for="student_name">Name </label>
-              <input type="text" id="student_name" name="student_name" required/>
-            </div>
-            <div class="form-group">
-                <label for="email">Email </label>
-                <input type="email" id="email" name="email"required/>
-              </div>
-            <div class="form-group">
-              <label for="phone_number">Phone Number </label>
-              <input type="tel" id="phone_number" name="phone_number"required/>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject </label>
-                <input type="text" id="subject" name="subject"required/>
-            </div>
-            <div class="form-group">
-                <label for="messsage">Message </label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <div class="submit">
-                <button type="submit" class="btn">Send<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
-            </svg></button>
-                
-            </div>
-          </form>
+    </button>
+    <section class="hero-section">
+        <img src="{% static 'images/projectsbanner.jpg' %}" alt="Internship Hero" class="hero-image">
+        <div class="container hero-text">
+            <h1 class="display-4 fw-bold">B.Tech Project Domains</h1>
         </div>
-      </section>
-    <section>
-        <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15172.982707323841!2d83.4055798!3d18.060178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c634bbcd67ea3bf!2sMaharaj%20Vijayaram%20Gajapathi%20Raj%20College%20of%20Engineering%20(Autonomous)!5e0!3m2!1sen!2sin!4v1644992557857!5m2!1sen!2sin" height="400px" width="100%" allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+    </section>
+    <section class="py-5">
+        <div class="container">
+
+            <div class="domain-section">
+                <h3 class="domain-title" style="color: #078EFB;">Computer Science & Engineering (CSE)</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/softwaredevelopment.jpg' %}" class="card-img-top" alt="Software Development Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Software Development</h5>
+                                <p class="card-text">Explore projects in Web Development, Mobile App Development, Software Engineering, etc.</p>
+                                <a href="cse_softwaredev_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Data science.jpg' %}" class="card-img-top" alt="Data Science Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Data Science</h5>
+                                <p class="card-text">Discover projects in Data Analysis, Machine Learning, Data Visualization, Big Data, etc.</p>
+                                <a href="cse_datascience_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/machinelearning.avif' %}" class="card-img-top" alt="AI/ML Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Artificial Intelligence & Machine Learning (AI/ML)</h5>
+                                <p class="card-text">Explore projects in Computer Vision, NLP, Deep Learning, Predictive Modeling, etc.</p>
+                                <a href="cse_aiml_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Cyber.jpg' %}" class="card-img-top" alt="Cybersecurity Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Cybersecurity</h5>
+                                <p class="card-text">Find projects related to Network Security, Ethical Hacking, Cryptography, System Security, etc.</p>
+                                <a href="cse_cybersecurity_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+
+            <div class="domain-section">
+                <h3 class="domain-title" style="color: #078EFB;">Electronics & Communication Engineering (ECE)</h3>
+                <div class="row"> 
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Embedded Systems.jpg' %}" class="card-img-top" alt="Embedded Systems Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Embedded Systems</h5>
+                                <p class="card-text">Explore projects in microcontroller programming, IoT applications, sensor networks, etc.</p>
+                                <a href="ece_embedded_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/VLSIDesign.webp' %}" class="card-img-top" alt="VLSI Design Image">
+                            <div class="card-body">
+                                <h5 class="card-title">VLSI Design</h5>
+                                <p class="card-text">Discover projects in chip design, digital logic, circuit simulation, FPGA programming, etc. </p>
+                                <a href="ece_vlsi_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Telecommunications.jpeg' %}" class="card-img-top" alt="Telecommunications Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Telecommunications</h5>
+                                <p class="card-text">Find projects related to wireless communication, mobile networks, optical fiber communication, etc.</p>
+                                <a href="ece_telecom_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Signal Processing.jpg' %}" class="card-img-top" alt="Signal Processing Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Signal Processing</h5>
+                                <p class="card-text">Explore projects in audio/image processing, digital signal processing, speech recognition, etc.</p>
+                                <a href="ece_signalprocessing_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="domain-section">
+                <h3 class="domain-title" style="color: #078EFB;">Electrical Engineering (EE)</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Power Systems.jpg' %}" class="card-img-top" alt="Power Systems Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Power Systems</h5>
+                                <p class="card-text">Explore projects in power generation, transmission, distribution, smart grids, renewable energy integration, etc.</p>
+                                <a href="ee_powersystems_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Control Systems.jpeg' %}" class="card-img-top" alt="Control Systems Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Control Systems</h5>
+                                <p class="card-text">Discover projects in feedback control, robotics control, industrial automation, process control, etc.</p>
+                                <a href="ee_controlsystems_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4"> 
+                        <div class="card h-100">
+                            <img src="{% static 'images/Robotics & Automation.avif' %}" class="card-img-top" alt="Robotics & Automation Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Robotics & Automation</h5>
+                                <p class="card-text">Explore projects in robot design, automation systems, industrial robotics, mechatronics, etc.</p>
+                                <a href="ee_robotics_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="domain-section">
+                <h3 class="domain-title" style="color: #078EFB;">Mechanical Engineering (ME)</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Design & Analysis of Machines.webp' %}" class="card-img-top" alt="Design & Analysis of Machines Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Design & Analysis of Machines</h5>
+                                <p class="card-text">Explore projects in machine design, FEA, CAD/CAM, mechanism analysis, etc.</p>
+                                <a href="me_designanalysis_projects.html" class="btn btn-primary">View Projects</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/Thermodynamics.jpg' %}" class="card-img-top" alt="Thermodynamics Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Thermodynamics</h5>
+                                <p class="card-text">Discover projects in heat transfer, fluid mechanics, energy conversion, combustion, etc.</p>
+                                <a href="me_thermodynamics_projects.html" class="btn btn-primary">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div> 
+            </div>
+
+            </div> 
+        </div>
     </section>
     <footer class="bg-dark text-white">
         <div class="container">

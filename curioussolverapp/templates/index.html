@@ -67,10 +67,8 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" >Projects</a>
                             <ul class="dropdown-menu rounded-0">
-                                <li><a href="#" class="dropdown-item">UG</a></li>
-                                <li><a href="#" class="dropdown-item">PG</a></li>
-                                <li><a href="#" class="dropdown-item">Ph.D</a></li>
-                                <li><a href="#" class="dropdown-item">Post Doc</a></li>
+                                <li><a href="{% url 'ugprojects' %}" class="dropdown-item">UG</a></li>
+                                <li><a href="{% url 'pgprojects' %}" class="dropdown-item">PG</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="{% url 'researchpaper' %}" class="nav-link">Research Paper Writing & Publishing</a></li>
@@ -79,8 +77,10 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" >Services</a>
                             <ul class="dropdown-menu rounded-0">
-                                <li><a href="#" class="dropdown-item">Career Guidance</a></li>
+                                <li><a href="#" class="dropdown-item">Ph.D</a></li>
+                                <li><a href="#" class="dropdown-item">Post Doc</a></li>
                                 <li><a href="{% url 'websitedevelopment' %}" class="dropdown-item">Website Development</a></li>
+                                <li><a href="#" class="dropdown-item">Career Guidance</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -148,10 +148,12 @@
             </h2>
             <div class="row d-flex">
                 <div class="col-md-4 d-flex" >
-                    <div class="service-item flex-fill">
-                        <h4>B.Tech Projects</h4>
-                        <p>Comprehensive project support for B.Tech students.</p>
-                    </div>
+                    <a href="{% url 'ugprojects' %}" style="text-decoration: none;">
+                        <div class="service-item flex-fill">
+                            <h4>B.Tech Projects</h4>
+                            <p>Comprehensive project support for B.Tech students.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 d-flex">
                     <div class="service-item flex-fill">
@@ -312,7 +314,7 @@
                             <img src="{% static 'images/web development.jpg' %}" alt="Android" class="img-fluid rounded">
                         </div>
                         <div class="content">
-                            <h3>web Development</h3>
+                            <h3>Web Development</h3>
                             <a href="#" class="btn btn-primary">Mini Project</a>
                             <a href="#" class="btn btn-primary">Major Project</a>
                             <a href="#" class="btn btn-secondary">View Project Titles</a>
