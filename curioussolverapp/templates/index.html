@@ -69,6 +69,7 @@
                             <ul class="dropdown-menu rounded-0">
                                 <li><a href="{% url 'ugprojects' %}" class="dropdown-item">UG</a></li>
                                 <li><a href="{% url 'pgprojects' %}" class="dropdown-item">PG</a></li>
+                                <li><a href="#" class="dropdown-item">DST/SERB</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="{% url 'researchpaper' %}" class="nav-link">Research Paper Writing & Publishing</a></li>
@@ -148,17 +149,16 @@
             </h2>
             <div class="row d-flex">
                 <div class="col-md-4 d-flex" >
-                    <a href="{% url 'ugprojects' %}" style="text-decoration: none;">
-                        <div class="service-item flex-fill">
-                            <h4>B.Tech Projects</h4>
-                            <p>Comprehensive project support for B.Tech students.</p>
-                        </div>
-                    </a>
+                    <div class="service-item flex-fill" onclick="window.location.href='{% url 'ugprojects' %}'">
+                        <h4 style="cursor: pointer;">B.Tech Projects</h4>
+                        <p style="cursor: pointer;">Comprehensive project support for B.Tech students.</p>
+                    </div>
+                    
                 </div>
                 <div class="col-md-4 d-flex">
-                    <div class="service-item flex-fill">
-                        <h4>M.Tech Projects</h4>
-                        <p>Advanced project guidance for M.Tech students.</p>
+                    <div class="service-item flex-fill" onclick="window.location.href='{% url 'pgprojects' %}'">
+                        <h4 style="cursor: pointer;">M.Tech Projects</h4>
+                        <p style="cursor: pointer;">Advanced project guidance for M.Tech students.</p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">
