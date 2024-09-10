@@ -15,5 +15,8 @@ urlpatterns = [
     path('courses/',views.courses,name='courses'),
     path('ugprojects/',views.ugprojects,name='ugprojects'),
     path('pgprojects/',views.pgprojects,name='pgprojects'),
+    path('dstserb/',views.dstserb,name='dstserb'),
+    path('careerguidance/',views.careerguidance,name='careerguidance'),
+    path('lms/',views.lms,name='lms'),
     path('internships/',views.internships,name='internships'),
 ]

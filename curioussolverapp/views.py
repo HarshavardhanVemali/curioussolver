@@ -35,6 +35,15 @@ def ugprojects(request):
 def pgprojects(request):
     return render(request,'pgprojects.html')
 
+def dstserb(request):
+    return render(request,'dstserb.html')
+
+def careerguidance(request):
+    return render(request,'careerguidance.html')
+
+def lms(request):
+    return render(request,'lms.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')
