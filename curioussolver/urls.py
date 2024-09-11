@@ -18,5 +18,6 @@ urlpatterns = [
     path('dstserb/',views.dstserb,name='dstserb'),
     path('careerguidance/',views.careerguidance,name='careerguidance'),
     path('lms/',views.lms,name='lms'),
+    path('postdoc/',views.postdoc,name='postdoc'),
     path('internships/',views.internships,name='internships'),
 ]

@@ -147,7 +147,7 @@
                             <a href="#" class="nav-link dropdown-toggle" >Services</a>
                             <ul class="dropdown-menu rounded-0">
                                 <li><a href="{% url 'researchpaper' %}" class="dropdown-item">Ph.D</a></li>
-                                <li><a href="#" class="dropdown-item">Post Doc</a></li>
+                                <li><a href="{% url 'postdoc' %}" class="dropdown-item">Post Doc</a></li>
                                 <li><a href="{% url 'websitedevelopment' %}" class="dropdown-item">Website Development</a></li>
                                 <li><a href="{% url 'careerguidance' %}" class="dropdown-item">Career Guidance</a></li>
                             </ul>
@@ -546,11 +546,10 @@
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'index' %}" class="text-white"><i class="bi bi-chevron-right"></i> Home</a></li>
                                 <li><a href="{% url 'contactus' %}" class="text-white"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
-                                <li><a href="#" class="text-white"><i class="bi bi-chevron-right"></i> Internships</a></li>
-                                <li><a href="#" class="text-white"><i class="bi bi-chevron-right"></i> UG Projects</a></li>
-                                <li><a href="#" class="text-white"><i class="bi bi-chevron-right"></i> PG Projects</a></li>
-                                <li><a href="#" class="text-white"><i class="bi bi-chevron-right"></i> Final Year Projects</a></li>
-                                <li><a href="#" class="text-white"><i class="bi bi-chevron-right"></i> IEEE Projects</a></li>
+                                <li><a href="{% url 'internships' %}" class="text-white"><i class="bi bi-chevron-right"></i> Internships</a></li>
+                                <li><a href="{% url 'ugprojects' %}" class="text-white"><i class="bi bi-chevron-right"></i> UG Projects</a></li>
+                                <li><a href="{% url 'pgprojects' %}" class="text-white"><i class="bi bi-chevron-right"></i> PG Projects</a></li>
+                                <li><a href="{% url 'patents' %}" class="text-white"><i class="bi bi-chevron-right"></i> Patents</a></li>
                             </ul>
                         </div>
                     </div>

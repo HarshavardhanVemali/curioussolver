@@ -44,6 +44,9 @@ def careerguidance(request):
 def lms(request):
     return render(request,'lms.html')
 
+def postdoc(request):
+    return render(request,'postdoc.html')
+
 def register(request):
     if request.method=='POST':
         student_name=request.POST.get('student_name')
